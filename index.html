@@ -7,7 +7,7 @@
   <style>
     body{margin:0;font-family:Arial, sans-serif;color:#e5e5e5;background:#0a0a0a;overflow-x:hidden}
     .hero{position:relative;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:url('icon.png') center/cover no-repeat;}
-.hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.55);backdrop-filter:blur(2px);}
+.hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.25);}
     .hero h1{font-size:60px;text-shadow:0 0 20px #000;font-weight:900}
 
     section{padding:60px 20px;max-width:1200px;margin:auto}
@@ -81,6 +81,33 @@
   </div>
 </section>
 
+  <!-- MODAL -->
+  <div id="modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);backdrop-filter:blur(4px);z-index:9999;align-items:center;justify-content:center;padding:20px;">
+    <div style="max-width:700px;width:90%;background:#111;border:1px solid #333;border-radius:14px;overflow:hidden;box-shadow:0 0 25px #000;">
+      <img id="modalImg" src="" style="width:100%;height:auto;display:block;">
+      <div id="modalTitle" style="padding:20px;font-size:24px;text-align:center;font-weight:700;color:#fff"></div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        const img = card.querySelector('img').src;
+        const title = card.querySelector('.card-title').innerText;
+        document.getElementById('modalImg').src = img;
+        document.getElementById('modalTitle').innerText = title;
+        document.getElementById('modal').style.display = 'flex';
+      });
+    });
+
+    document.getElementById('modal').addEventListener('click', (e) => {
+      if(e.target.id === 'modal'){
+        document.getElementById('modal').style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
+
+
 
