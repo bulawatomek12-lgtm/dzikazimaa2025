@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DZIKA ZIMA — Serwer Minecraft</title>
+  <style>
+    body{margin:0;font-family:Arial, sans-serif;color:#e5e5e5;background:#0a0a0a;overflow-x:hidden}
+    .hero{position:relative;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:url('icon.png') center/cover no-repeat;}
+.hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.55);backdrop-filter:blur(2px);}
+    .hero h1{font-size:60px;text-shadow:0 0 20px #000;font-weight:900}
+
+    section{padding:60px 20px;max-width:1200px;margin:auto}
+    h2{text-align:center;font-size:40px;margin-bottom:40px;text-transform:uppercase}
+
+    .biznesy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+    .card{background:#111;border:1px solid #222;border-radius:14px;overflow:hidden;box-shadow:0 0 18px #000;transition:.3s}
+    .card:hover{transform:scale(1.03)}
+    .card img{width:100%;height:170px;object-fit:cover}
+    .card-title{padding:15px;font-size:20px;font-weight:bold;text-align:center}
+
+    .event-card{background:#141414;border:1px solid #222;border-radius:16px;overflow:hidden;box-shadow:0 0 25px #000}
+    .event-card img{width:100%;height:300px;object-fit:cover}
+    .event-info{padding:25px;font-size:22px;text-align:center}
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>ZACZĄŁ SIĘ SEZON ZIMOWY!!!</h1>
+</div>
+
+<!-- BIZNESY -->
+<section id="biznesy">
+  <h2>BIZNESY</h2>
+  <div class="biznesy-grid">
+
+    <div class="card">
+      <img src="dyl_zaklady.png" alt="Dyl Zakłady Bukmacherskie">
+      <div class="card-title">(Dyl) ZAKŁADY BUKMACHERSKIE</div>
+    </div>
+
+    <div class="card">
+      <img src="jasiu_kasyno.png" alt="Jasiu Kasyno">
+      <div class="card-title">(Jasiu) KASYNO</div>
+    </div>
+
+    <div class="card">
+      <img src="dzik_kfc.png" alt="Dzik KFC">
+      <div class="card-title">(Dzik) KFC</div>
+    </div>
+
+    <div class="card">
+      <img src="radek_mcd.png" alt="Radek McDonald">
+      <div class="card-title">(Radek) McDONALD</div>
+    </div>
+
+    <div class="card">
+      <img src="radek_barclub.png" alt="Radek Bar Club">
+      <div class="card-title">(Radek) BAR CLUB</div>
+    </div>
+
+    <div class="card">
+      <img src="marcel_kebab.png" alt="Marcel Kebab">
+      <div class="card-title">(Marcel/Niger) KEBAB</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WYDARZENIA -->
+<section id="wydarzenia">
+  <h2>WYDARZENIA</h2>
+  <div class="event-card">
+    <img src="wjazd_do_endu.jpg" alt="Wjazd do Endu">
+    <div class="event-info">
+      <strong>WJAZD DO ENDU</strong><br><br>
+      28 listopada, godzina 21:00
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
+
