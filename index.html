@@ -26,6 +26,16 @@
 </head>
 <body>
 
+<!-- MUZYKA W TLE -->
+<audio id="bgmusic" src="muzyka.mp3" autoplay loop></audio>
+<script>
+  // Autoplay w Chrome wymaga interakcji — więc włączamy po pierwszym kliknięciu
+  document.addEventListener('click', () => {
+    const audio = document.getElementById('bgmusic');
+    if (audio.paused) audio.play();
+  });
+</script>
+
 <!-- HERO -->
 <div class="hero">
   <h1>ZACZĄŁ SIĘ SEZON ZIMOWY!!!</h1>
@@ -108,6 +118,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 
